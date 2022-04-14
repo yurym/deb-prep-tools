@@ -87,8 +87,8 @@ cat <<EOT > /etc/wireguard/wg0.conf
 Address = 10.100.100.1/24,fdfd:100:100::1/64
 ListenPort = $SERVERPORT
 PrivateKey = `cat /etc/wireguard/wg0-private-server.key`
-PostUp = /etc/wireguard/wg_rules.sh -a
-PostDown = /etc/wireguard/wg_rules.sh -d
+PostUp = /etc/wireguard/wg0_rules.sh -a
+PostDown = /etc/wireguard/wg0_rules.sh -d
 
 EOT
 
