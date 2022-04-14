@@ -9,7 +9,7 @@ FWDPORT=20000
 if [ -f /etc/wireguard/wg0_rules.sh ]; then
   systemctl stop wg-quick@wg0.service
   systemctl disable wg-quick@wg0.service
-  /etc/wireguard/wg0_rules.sh -d
+# /etc/wireguard/wg0_rules.sh -d
   rm /etc/sysctl.d/wg0.conf
   rm /etc/wireguard/wg0*
   sysctl --system
