@@ -21,7 +21,6 @@ if ((CLIENTS > 1)); then
     echo "tg://proxy?server=`curl -4s icanhazip.com`&port=$SERVERPORT&secret=$SECRET" >> /root/mtproxy/links.txt
   done
 fi
-chmod 600 /root/mtproxy/.env
 # --------------------------------------------------
 SECRET='${SECRET}'
 cat <<EOT > /root/mtproxy/docker-compose.yml
