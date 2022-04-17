@@ -5,7 +5,6 @@ SERVERIP=`curl -4s icanhazip.com`
 SERVERPORT=51194
 #SERVERPORTALT=53,51820
 #FWDPORT=20000
-
 # --------------------------------------------------
 if [ -f /etc/wireguard/wg0_rules.sh ]; then
   systemctl stop wg-quick@wg0.service
@@ -15,6 +14,7 @@ if [ -f /etc/wireguard/wg0_rules.sh ]; then
   sysctl --system
 fi
 # --------------------------------------------------
+apt-get update
 apt-get install -y \
   wireguard wireguard-tools \
   iproute2 iptables traceroute \

@@ -37,3 +37,11 @@ apt-get -y install curl; curl -s https://raw.githubusercontent.com/yurym/deb-pre
 ```
 
 Default vars: `CLIENTS=1` and `SERVERPORT=443`. Proxy links in `links.txt` file.
+
+## Shadowsocks (Docker Compose V2)
+
+```
+apt-get -y install curl; curl -s https://raw.githubusercontent.com/yurym/deb-prep-tools/main/inst_debian_dckr_ss.sh | bash
+```
+
+Default vars: `SERVERPORT=8388` and ``PASSWORD=`cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 16` ``.
