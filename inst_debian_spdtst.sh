@@ -1,9 +1,8 @@
 #!/bin/bash
 
-apt-get update
+# https://www.speedtest.net/apps/cli
 
-apt-get -y install curl
+apt update
+apt -y install curl
 curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
-apt-get -y install speedtest
-
-#chmod -x `basename "$0"`
+apt -y install speedtest
